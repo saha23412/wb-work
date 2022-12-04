@@ -1,0 +1,230 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    font-family: 'Segoe UI';
+    font-style: normal;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+body{
+    overflow-x: hidden;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+.item__price__mobile{
+    display: none;
+}
+/*Container*/
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+.container__main__content {
+    width: 891px;
+}
+
+/*Header*/
+.header {
+    height: 112px;
+    width: 100%;
+    background: #6725A8;
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.header__wrapper {
+    align-items: center;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__wrapper {
+    display: flex;
+
+
+}
+
+button {
+    cursor: pointer;
+}
+
+.logo__images {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.logo__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 24px;
+    font-variant: small-caps;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.header__search {
+    position: relative;
+
+}
+
+.header__search::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 25px;
+    margin: auto 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background: url('../images/icons/search-icon.svg') no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+#label__wrapper{
+position: relative;
+}
+.label__amount{
+opacity: 0;
+position: absolute;
+top: -5px;
+right: 3px;
+width: 16px;
+height: 16px;
+color: white;
+border-radius:50% ;
+background-color: #F55123;
+align-items: center;
+text-align: center;
+display: flex;
+justify-content: center;
+font-size: 10px;
+}
+.input__search {
+    padding: 20px;
+    outline: none;
+    border: 0px solid;
+    width: 970px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 36px;
+}
+
+.input__search::placeholder {
+
+    color: white;
+    opacity: 0.5;
+}
+
+.header__menu {
+    display: flex;
+
+}
+
+.item-menu:first-child {
+    margin-right: 40px;
+}
+
+.item-menu {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-menu__img {
+    margin: 0 auto;
+}
+
+.item-menu__link {
+
+    font-size: 13px;
+    text-align: end;
+    color: #FFFFFF;
+}

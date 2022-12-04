@@ -1,0 +1,55 @@
+#mobile__total{
+    border-radius: 0;
+    box-shadow: none;
+    display: none;
+    position: static;
+    width: 320px;
+height: 378px;
+background-color: transparent;
+}
+.mobile__delivery{
+    display: none;
+}
+.mobile__title{
+    font-weight: 700;
+font-size: 20px;
+}
+.mobile__style{
+    
+    font-weight: 400;
+font-size: 13px;
+}
+.mobile__label{
+   
+    margin-top: 16px;
+}
+.mobile__total__info__payment{
+    margin-top: 16px;
+}
+.mobile__total__info__delivery{
+    background: #F0ECF4;
+border-radius: 8px;
+}
+.mobile__total__info__payment{
+    background: #F0ECF4;
+border-radius: 8px;
+}
+.mobile__label__total__agreement{
+    width: 267px;
+}
+.total__info__checkbox{
+margin-top: 0px;
+}
+.menu__mobile{
+    display: none;
+    width: 320px;
+    align-items: center;
+    justify-content: space-around;
+    height: 56px;
+background: #FFFFFF;
+box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
+backdrop-filter: blur(2.5px);
+}
+.header__wrapper__mobile{
+display: none;
+}

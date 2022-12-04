@@ -1,0 +1,66 @@
+.basket__all label {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    cursor: pointer;
+}
+
+.modal__element {
+    align-items: center;
+}
+
+.input-checkbox__style {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0);
+    position: fixed !important;
+}
+
+.label__product {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox__style {
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    margin-right: 12px;
+}
+
+.radio__style {
+    display: inline-block;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+.input-checkbox__style:checked+.radio__style {
+    background-image: url(../images/radio.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#checkbox_all:checked+.checkbox__style {
+    background-image: url(../images/icons/check-markeh-white.svg);
+    background-repeat: no-repeat;
+
+    background-position: center;
+    background-color: #CB11AB;
+}
+
+#checkbox_product:checked+.checkbox__style {
+    background-image: url(../images/icons/check-markeh-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #CB11AB;
+}

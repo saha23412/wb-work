@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/basket.css">
+    <link rel="stylesheet" href="css/mobile-total.css">
+    <link rel="stylesheet" href="css/radio-checkbox.css">
+    <link rel="stylesheet" href="css/modal-payment.css">
+    <link rel="stylesheet" href="css/modal-delivery.css">
+    <link rel="stylesheet" href="css/missing-products.css">
+    <link rel="stylesheet" href="css/payment-method.css">
+    <link rel="stylesheet" href="css/adaptive-layout.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper" id="header">
+                <div class="logo__wrapper">
+                    <div class="logo__images">
+                        <img src="/images/icons/hamburger-icon.svg" alt="hamburger-icon">
+                    </div>
+                    <p class="logo__title">товары <br> и точка</p>
+
+                </div>
+                <div class="header__search">
+
+                    <input class="input__search" type="text" placeholder="Я ищу...">
+                </div>
+                <nav class="header__menu">
+                    <div class="item-menu">
+                        <img src="/images/icons/eclude-icon.svg" alt="profile">
+                        <a class="item-menu__link" href="#">Профиль</a>
+                    </div>
+                    <div class="item-menu" id="label__wrapper">
+                        <img src="/images/icons/basket-icon.svg" alt="basket">
+                        <a class="item-menu__link" href="#">Корзина</a>
+                        <p class="label__amount">0</p>
+                    </div>
+                </nav>
+            </div>
+            <div class="header__wrapper__mobile" id="header">
+                <img src="/images/icons/mobile-bar.svg" alt="mobile-bar">
+                <p>Товары и точка</p>
+                <div class="header__search">
+
+                    <input class="input__search" type="text" placeholder="Я ищу...">
+                </div>
+                <img class="search__img" src="/images/icons/search-icon.svg" alt="search-icon">
+            </div>
+        </div>
+    </header>
+    <section class="basket ">
+        <div class="container">
+            <div class="order">
+                <div class="accordion">
+                    <div class="product__total__wrapper" id="total__Wrapper">
+                        <div class="container__main__content">
+                            <div class="basket__wrapper">
+                                <h1 class="basket__title">Корзина</h1>
+                                <div class="basket__checkbox__wrapper">
+                                    <div class="basket__all">
+                                        <label>
+                                            <input type="checkbox" class="input-checkbox__style" id="checkbox_all">
+                                            <span class="checkbox__style" id="checkbox__main"></span>
+                                            Выбрать все
+                                        </label>
+                                    </div>
+                                    <div class="basket__accordion__info">
+                                        <p class="basket__accordion__text">266 товаров · 2 100 569 сом</p>
+                                    </div>
+                                    <img class="accordion__img accordion__button-product"
+                                        src="/images/icons/reverse-arrow-icon.svg" alt="arrow">
+                                </div>
+                                <div class="accordion__content-product" id="accardion2" data-flag="true">
+                                    <div class="basket__item" id="basket__item_1">
+                                        <div class="basket__item__wrapper">
+                                            <div class="basket__singlet">
+                                                <div class="input__checkbox">
+                                                    <label class="label__product">
+                                                        <input data-name="t-shirt" class="input-checkbox__style"
+                                                            id="checkbox_product" type="checkbox">
+                                                        <span class="checkbox__style"></span>
+                                                        <img src="/images/product/t-shirt.svg" alt="product1">
+
+                                                    </label>
+                                                </div>
+                                                <div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="item__price__mobile">
+                                                    <div class="cummon_style_wrapper">
+                                                        <p class="item__price__text cummon_price_style" data-name="t-shirt">
+                                                            522
+                                                            <span>сом</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="cummon_style_wrapper notification__style">
+                                                        <p class="item__discount__text" data-name="t-shirt"
+                                                            id="text__decoration">1044 сом</p>
+                                                        <div class="notification__discount">
+                                                            <div class="notification__discount__text">
+                                                                <p class="notification__discount__num">Скидка покупателя 50%
+                                                                </p>
+                                                                <p class="notification__discount__minus">-522 сом</p>
+                                                            </div>
+                                                            <div class="notification__discount__text">
+                                                                <p class="notification__discount__num">Скидка покупателя 0%
+                                                                </p>
+                                                                <p class="notification__discount__minus">0 сом</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                                <div class="item__info">
+                                                    <p class="item__title item__title_1" >Футболка UZcotton мужская</p>
+                                                </div>
+                                                <div class="item__color__size">
+                                                    <p>Цвет: белый</p>
+                                                    <p  class="size">Размер: 56</p>
+                                                </div>
+                                                <p class="item__place">Коледино WB</p>
+                                                <div class="item__company">
+                                                    <p class="item__place dn">OOO Вайлдберриз</p>
+                                                    <div class="info__images">
+                                                        <img class="info__images" src="/images/icons/info-icon.svg"
+                                                            alt="info">
+                                                        <div class="notification">
+                                                            <p class="notification__title">OOO «Вайлдберриз»</p>
+                                                            <p class="notification__text">ОГРН: 5167746237148</p>
+                                                            <p class="notification__street">129337, Москва, улица
+                                                                Красная Сосна,
+                                                                2, корпус 1, стр. 1, помещение 2, офис 34</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__amount__wrapper">
+                                            <div class="item__amount">
+                                                <div class="mobile_amount">
+                                                    <div class="item__calculations">
+                                                        <button class="button_amount" id="minus"
+                                                            data-name="t-shirt">−</button>
+                                                        <p class="item__amount__text" data-name="t-shirt">1</p>
+                                                        <button class="button_amount" id="plus"
+                                                            data-name="t-shirt">+</button>
+                                                    </div>
+                                                    <p class="item__left" data-name="t-shirt">Осталось 2 шт.</p>
+                                                    <div class="item__interaction">
+                                                        <img src="/images/icons/favorites-icon.svg"
+                                                            alt="favorites-icon">
+                                                        <img src="/images/icons/trash-icon.svg" alt="trash-icon">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item__price">
+                                                <div class="cummon_style_wrapper">
+                                                    <p class="item__price__text cummon_price_style" data-name="t-shirt">
+                                                        522
+                                                        <span>сом</span>
+                                                    </p>
+                                                </div>
+                                                <div class="cummon_style_wrapper notification__style">
+                                                    <p class="item__discount__text" data-name="t-shirt"
+                                                        id="text__decoration">1044 сом</p>
+                                                    <div class="notification__discount">
+                                                        <div class="notification__discount__text">
+                                                            <p class="notification__discount__num">Скидка покупателя 50%
+                                                            </p>
+                                                            <p class="notification__discount__minus">-522 сом</p>
+                                                        </div>
+                                                        <div class="notification__discount__text">
+                                                            <p class="notification__discount__num">Скидка покупателя 0%
+                                                            </p>
+                                                            <p class="notification__discount__minus">0 сом</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--Basket-item-1-->
+                                    <div class="basket__item">
+                                        <div class="basket__item__wrapper">
+                                            <div class="basket__singlet">
+                                                <div class="input__checkbox">
+                                                    <label class="label__product">
+                                                        <input data-name="telephone" class="input-checkbox__style"
+                                                            id="checkbox_product" type="checkbox">
+                                                        <span class="checkbox__style"></span>
+                                                        <img src="/images/product/telephone.svg" alt="product1">
+                                                    </label>
+                                                </div>
+                                                <div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="item__price__mobile">
+                                                    <div class="cummon_style_wrapper">
+                                                        <p class="item__price__text cummon_price_style" data-name="telephone">
+                                                            10 000
+                                                            <span>сом</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="cummon_style_wrapper notification__style">
+                                                        <p class="item__discount__text" data-name="telephone"
+                                                            id="text__decoration">25 000 сом сом</p>
+                                                        <div class="notification__discount">
+                                                            <div class="notification__discount__text">
+                                                                <p class="notification__discount__num">Скидка покупателя 60%
+                                                                </p>
+                                                                <p class="notification__discount__minus">-15 000 сом</p>
+                                                            </div>
+                                                            <div class="notification__discount__text">
+                                                                <p class="notification__discount__num">Скидка покупателя 0%
+                                                                </p>
+                                                                <p class="notification__discount__minus">0 сом</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                                <div class="item__info">
+                                                    <p class="item__title item__title-2">
+                                                        Силиконовый чехол картхолдер (отверстия)для
+                                                        карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                                                    </p>
+                                                </div>
+                                                <div class="item__color__size">
+                                                    <p>Цвет: прозрачный</p>
+                                                </div>
+                                                <p class="item__place">Коледино WB</p>
+                                                <div class="item__company">
+                                                    <p class="item__place dn" >OOO Мегапрофстиль</p>
+                                                    <div class="info__images">
+                                                        <img class="info__images" src="/images/icons/info-icon.svg"
+                                                            alt="info">
+                                                        <div class="notification notification2 ">
+                                                            <p class="notification__title">OOO «Мегапрофстиль»</p>
+                                                            <p class="notification__text">ОГРН: 5167746237148</p>
+                                                            <p class="notification__street">129337, Москва, улица
+                                                                Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="item__amount__wrapper">
+                                            <div class="item__amount">
+                                                <div class="item__amount__block">
+                                                    <div class="item__calculations">
+                                                        <button class="button_amount" id="minus"
+                                                            data-name="telephone">−</button>
+                                                        <p class="item__amount__text" data-name="telephone">1</p>
+                                                        <button class="button_amount" id="plus"
+                                                            data-name="telephone">+</button>
+                                                    </div>
+                                                    <p class="item__left" data-name="telephone">Осталось 200 шт.</p>
+                                                    <div class="item__interaction">
+                                                        <img src="/images/icons/favorites-icon.svg"
+                                                            alt="favorites-icon">
+                                                        <img src="/images/icons/trash-icon.svg" alt="trash-icon">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item__price">
+                                                <div class="cummon_style_wrapper">
+                                                    <p class="item__price__text cummon_price_style" id="price__text-2"
+                                                        data-name="telephone">10 000<span> coм</span></p>
+                                                </div>
+                                                <div class="cummon_style_wrapper notification__style">
+                                                    <p class="item__discount__text" id="text__decoration"
+                                                        data-name="telephone">
+                                                        25 000 сом</p>
+                                                    <div class="notification__discount">
+                                                        <div class="notification__discount__text">
+                                                            <p class="notification__discount__num">Скидка покупателя 60%
+                                                            </p>
+                                                            <p class="notification__discount__minus">-15 000 сом</p>
+                                                        </div>
+                                                        <div class="notification__discount__text">
+                                                            <p class="notification__discount__num">Скидка покупателя 0%
+                                                            </p>
+                                                            <p class="notification__discount__minus">0 сом</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--Basket-item-2-->
+                                    <div class="basket__item">
+                                        <div class="basket__item__wrapper">
+                                            <div class="basket__singlet">
+                                                <div class="input__checkbox">
+                                                    <label class="label__product">
+                                                        <input data-name="book" class="input-checkbox__style"
+                                                            id="checkbox_product" type="checkbox">
+                                                        <span class="checkbox__style"></span>
+                                                        <img src="/images/product/book.svg" alt="product1">
+
+                                                    </label>
+                                                </div>
+                                                <div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="item__price__mobile">
+                                                    <div class="cummon_style_wrapper">
+                                                        <p class="item__price__text cummon_price_style" data-name="book">
+                                                            247
+                                                            <span>сом</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="cummon_style_wrapper notification__style">
+                                                        <p class="item__discount__text" data-name="book"
+                                                            id="text__decoration">494 сом</p>
+                                                        <div class="notification__discount">
+                                                            <div class="notification__discount__text">
+                                                                <p class="notification__discount__num">Скидка покупателя 50%
+                                                                </p>
+                                                                <p class="notification__discount__minus">-247 сом</p>
+                                                            </div>
+                                                            <div class="notification__discount__text">
+                                                                <p class="notification__discount__num">Скидка покупателя 0%
+                                                                </p>
+                                                                <p class="notification__discount__minus">0 сом</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                                <div class="item__info">
+                                                    <p class="item__title">Карандаши цветные Faber-Castell "Замок",
+                                                        набор 24
+                                                        цвета,
+                                                        заточенные, шестигранные,Faber-Castell </p>
+                                                </div>
+                                                <p class="item__place">Коледино WB</p>
+                                                <div class="item__company">
+                                                    <p class="item__place dn">OOO Вайлдберриз</p>
+                                                    <div class="info__images">
+                                                        <img src="/images/icons/info-icon.svg" alt="info">
+                                                        <div class="notification">
+                                                            <p class="notification__title">OOO «Вайлдберриз»</p>
+                                                            <p class="notification__text">ОГРН: 5167746237148</p>
+                                                            <p class="notification__street">129337, Москва, улица
+                                                                Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__amount__wrapper">
+                                            <div class="item__amount">
+                                                <div class="item__amount__block">
+                                                    <div class="item__calculations">
+                                                        <button class="button_amount" id="minus"
+                                                            data-name="book">−</button>
+                                                        <p class="item__amount__text" data-name="book">1</p>
+                                                        <button class="button_amount" id="plus"
+                                                            data-name="book">+</button>
+                                                    </div>
+                                                    <p class="item__left" data-name="book">Осталось 2 шт.</p>
+                                                    <div class="item__interaction">
+                                                        <img src="/images/icons/favorites-icon.svg"
+                                                            alt="favorites-icon">
+                                                        <img src="/images/icons/trash-icon.svg" alt="trash-icon">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="item__price">
+                                                <div class="cummon_style_wrapper">
+                                                    <p class="item__price__text cummon_price_style" data-name="book">247
+                                                        <span> сом</span>
+                                                    </p>
+                                                </div>
+                                                <div class="cummon_style_wrapper notification__style">
+                                                    <p class="item__discount__text" id="text__decoration"
+                                                        data-name="book">
+                                                        494 сом</p>
+                                                    <div class="notification__discount">
+                                                        <div class="notification__discount__text">
+                                                            <p class="notification__discount__num">Скидка покупателя 50%
+                                                            </p>
+                                                            <p class="notification__discount__minus">-247 сом</p>
+                                                        </div>
+                                                        <div class="notification__discount__text">
+                                                            <p class="notification__discount__num">Скидка покупателя 0%
+                                                            </p>
+                                                            <p class="notification__discount__minus">-0 сом</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--Basket-item-3-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total" id="total">
+                            <div class="total__wrapper__text total__info__common" id="total__price">
+                                <p>Итого</p>
+                                <p id="price">0 cом</p>
+                            </div>
+                            <div class="total__info">
+                                <div class="total__amount total__info__common">
+                                    <p class="total__amount__span" id="amount__product">0 товара</p>
+                                    <p id="price_product_not_dictount">0 сом</p>
+                                </div>
+                                <div class="total__discount total__info__common">
+                                    <p>Скидка</p>
+                                    <p class="total__discount__text" id="discount_price_product">0 сом</p>
+                                </div>
+                                <div class="total__delivery total__info__common">
+                                    <p>Доставка</p>
+                                    <p>Бесплатно</p>
+                                </div>
+                                <div class="total__delivery__point total__info__common">
+                                    <p>Доставка в пункт выдачи</p>
+                                    <img class="edit__img__delivery" id="delivery__method"
+                                        src="/images/icons/edit-icon.svg" alt="edit">
+                                </div>
+                                <p class="total__street" id="street">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                                <p class="total__delivery__time"><span>5–8 фев</span></p>
+                                <div class="total__info__delivery total__info__common">
+                                    <img src="/images/icons/successful-check-icon.svg" alt="check">
+                                    <div class="notification__hover">
+                                        <p>Обратная доставка товаров на склад при отказе — <span>бесплатно</span></p>
+                                        <div class="notification__free">
+                                            <p>Если товары вам не подойдут, мы вернем их обратно на склад — это
+                                                бесплатно</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="total__payment total__info__common">
+                                    <p>Оплата картой</p>
+                                    <img class="edit__img__payment" id="payment__modal"
+                                        src="/images/icons/edit-icon.svg" alt="edit">
+                                </div>
+                                <div class="total__map ">
+                                    <img id="payment__method" src="/images/icons/payment-icon.svg" alt="payment">
+                                    <p>1234 12•• •••• 1234</p>
+                                </div>
+                                <div class="total__info__payment">
+                                    <div class="total__info__checkbox">
+                                        <div class="basket__all">
+                                            <label>
+                                                <input type="checkbox" class="input-checkbox__style" id="checkbox_all">
+                                                <span class="checkbox__style"></span>
+                                                Списать оплату сразу
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <p class="order__conditions">Спишем оплату с карты при получении</p>
+                                </div>
+                                <button class="total__order">Заказать</button>
+                                <div class="total__agreement">
+                                    <img src="/images/icons/check-mark-icon.svg" alt="check">
+                                    <p> Соглашаюсь <span>с правилами пользования торговой <br> площадкой</span>
+                                        и <span>возврата</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" id="accordion">
+                    <div class="container__main__content">
+
+                        <div class="product__missing">
+                            <div class="product__missing__amount">
+                                <p>Отсутствуют · 3 товара </p>
+                                <img class="accordion__img accordion__button-missing-product"
+                                    src="/images/icons/reverse-arrow-icon.svg" alt="arrow">
+                            </div>
+                            <div class="accordion__content-missing-product" data-flag="true">
+                                <div class="product__missing__wrapper">
+                                    <!--Product-missing-1-->
+                                    <div class="product__missing-item" id="product-item-1">
+                                        <div class="item-missing__wrapper">
+                                            <img class="item__product__img" src="/images/product/t-shirt.svg"
+                                                alt="product1">
+                                            <div class="item-missing__info">
+                                                <p>Футболка UZcotton мужская</p>
+                                                <span>Цвет: белый</span>
+                                                <span >Размер: 56</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-missing__interaction">
+                                            <img src="/images/icons/favorites-icon.svg" alt="favorites">
+                                            <img src="/images/icons/trash-icon.svg" alt="trash">
+                                        </div>
+                                    </div>
+                                    <!--Product-missing-2-->
+                                    <div class="product__missing-item">
+                                        <div class="item-missing__wrapper">
+                                            <img class="item__product__img" src="/images/product/telephone.svg"
+                                                alt="product2">
+                                            <div class="item-missing__info">
+                                                <p class="mobile__text">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс
+                                                    бампер
+                                                    на
+                                                    Apple
+                                                    iPhone XR, MobiSafe</p>
+                                                <span class="item-missing__color">Цвет: прозрачный</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="item-missing__interaction">
+                                            <img src="/images/icons/favorites-icon.svg" alt="favorites">
+                                            <img src="/images/icons/trash-icon.svg" alt="trash">
+                                        </div>
+                                    </div>
+                                    <!--Product-missing3-->
+                                    <div class="product__missing-item">
+                                        <div class="item-missing__wrapper">
+                                            <img class="item__product__img" src="/images/product/book.svg"
+                                                alt="product3">
+                                            <div class="item-missing__info">
+                                                <p class="mobile__text">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные,
+                                                    шестигранные,
+                                                    Faber-Castell </p>
+                                            </div>
+                                        </div>
+                                        <div class="item-missing__interaction">
+                                            <img src="/images/icons/favorites-icon.svg" alt="favorites">
+                                            <img src="/images/icons/trash-icon.svg" alt="trash">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modals">
+                <div class="modal-overlay">
+                    <div class="modal-payment">
+                        <div class="modal__content">
+                            <div class="modal__close">
+                                <p class="modal__title">Способ оплаты</p>
+                                <img id="close__payment" src="/images/icons/close.svg" alt="close">
+                            </div>
+                            <div class="payment__cards">
+
+                                <form class="modal__items__element">
+                                    <label class="modal__element">
+                                        <input checked class="input-checkbox__style" value="payment-icon" type="radio"
+                                            id="payment-icon" value="payment-icon" name="payment">
+                                        <span class="radio__style"></span>
+                                        <img src="./images/icons/payment-icon.svg" alt="card1">
+                                        <p>1234 56•• •••• 1234</p>
+                                    </label>
+                                    <label class="modal__element" id="visa">
+                                        <input class="input-checkbox__style" type="radio" value="visa" name="payment">
+                                        <span class="radio__style"></span>
+
+                                        <img src="./images/icons/visa.svg" alt="card2">
+                                        <p>1234 56•• •••• 1234</p>
+                                    </label>
+                                    <label class="modal__element" id="card1">
+                                        <input class="input-checkbox__style" type="radio" value="card1" name="payment">
+                                        <span class="radio__style"></span>
+
+                                        <img src="./images/icons/card1.svg" alt="card3">
+                                        <p>1234 56•• •••• 1234</p>
+                                    </label>
+                                    <label class="modal__element" id="card2">
+                                        <input class="input-checkbox__style" type="radio" value="card2" name="payment">
+                                        <span class="radio__style"></span>
+
+                                        <img src="./images/icons/card2.svg" alt="card4">
+                                        <p>1234 56•• •••• 1234</p>
+                                    </label>
+                                </form>
+
+                                <button class="modal-payment__button">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-delivery">
+                        <div class="modal-delivery-content">
+                            <div class="modal__close" id="modal__close">
+                                <p class="modal__title modal__delivery__title" id="modal__delivery__title">Способ
+                                    доставки</p>
+                                <img src="/images/icons/close.svg" id="close__delivery" alt="close">
+                            </div>
+                            <div class="form_radio_group">
+                                <div class="form_radio_group-item">
+                                    <input class="button__label" id="radio-1" type="radio" name="delivery"
+                                        value="в пункт выдачи">
+                                    <label id="label1" for="radio-1">В пункт выдачи</label>
+                                </div>
+                                <div class="form_radio_group-item">
+                                    <input class="button__label" checked id="radio-2" type="radio" name="delivery"
+                                        value="курьером">
+                                    <label for="radio-2">Курьером</label>
+                                </div>
+
+
+                            </div>
+                            <div class="form_radio_group2">
+                                <div>
+                                    <p class="modal_adres">Мои адреcа</p>
+
+                                </div>
+                                <div class="form_radio_group-item_street">
+                                    <label class="radio_label">
+                                        <input checked id="radio-3" class="input-checkbox__style" type="radio"
+                                            name="street" value="Бишкек, улица Табышалиева, 57">
+                                        <span class="radio__style"></span>
+
+                                        <p>
+                                            Бишкек, улица Табышалиева, 57
+                                            <img class="mobile__span__img"  src="/images/icons/rating-icon.png" alt="rating">
+                                            <span class="mobile__span__img" >Пункт выдачи</span>
+                                        </p>
+                                        
+                                    </label>
+                                    <img src="/images/icons/trash-icon.svg" alt="trash">
+                                 
+                                </div>
+                                
+                                <div class="form_radio_group-item_street">
+                                    <label class="radio_label">
+                                        <input class="input-checkbox__style" type="radio" name="street"
+                                            value=" Бишкек, улица Жукеева-Пудовкина, 77/1">
+                                        <span class="radio__style"></span>
+                                        <p>
+                                            Бишкек, улица Жукеева-Пудовкина, 77/1 <br>
+                                            <img class="mobile__span__img"  src="/images/icons/rating-icon.png" alt="rating">
+                                            <span class="mobile__span__img" >4.99 Пункт выдачи</span>
+                                        </p>
+                                    </label>
+                                    <img src="/images/icons/trash-icon.svg" alt="trash">
+                                </div>
+                                <div class="form_radio_group-item_street">
+                                    <label class="radio_label">
+                                        <input id="radio-5" class="input-checkbox__style" type="radio" name="street"
+                                            value="Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1">
+                                        <span class="radio__style"></span>
+
+                                        <p>
+                                            Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1 <br>
+                                            <img class="mobile__span__img" src="/images/icons/rating-icon.png" alt="rating">
+                                            <span class="mobile__span__img" >4.99 Пункт выдачи</span>
+                                        </p>
+                                    </label>
+                                    <img src="/images/icons/trash-icon.svg" alt="trash">
+                                </div>
+                            </div>
+                            <button class="modal-delivery__button">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container__mobile ">
+                <div class="container__main__content" id="mobile__delivery__method">
+                    <div class="delivery__method">
+                        <div class="delivery__edit">
+                            <p class="delivery__edit__text">Способ доставки</p>
+                            <p class="delivery__edit__color" id="delivery__method">Изменить</p>
+                        </div>
+                        <div class="place__delivery">
+                            <p class="place__delivery__point__color">Пункт выдачи</p>
+                            <div class="place__delivery__street">
+                                <p class="street" id="street">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                                <div class="place__delivery__rating">
+                                    <div class="rating__img">
+                                        <img src="/images/icons/rating-icon.png" alt="rating-icon">
+
+                                    </div>
+                                    <p class="rating__text">4.99</p>
+                                    <p>Ежедневно с 10 до 21 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place__delivery__price">
+                            <p class="place__delivery__point__color">Стоимость доставки</p>
+                            <p>Бесплатно</p>
+                        </div>
+                        <div class="place__delivery__data">
+                            <div class="place__delivery__time" id="delivery__1">
+                                <p class="place__delivery__point__color">5—6 февраля</p>
+                                <div class="place__delivery__wrapper__img">
+
+                                </div>
+                            </div>
+                            <div class="place__delivery__time " id="delivery__2">
+                                <p class="place__delivery__point__color">7—8 февраля</p>
+                                <img src="/images/product/book.svg" alt="product3">
+                            </div>
+                            <div class="place__delivery__free">
+                                <img class="check-marker" src="/images/icons/successful-check-icon.svg" alt="check">
+                                <div class="information__freeproduct">
+                                    <div class="notification__hover_2">
+                                        <div class="style__text__free_2">
+                                            <p id="mobile__notification__text">Обратная доставка товаров на склад при отказе — <span class="style__free" id="span__free">бесплатно</span></p>
+                                            <div id="style__free_2">
+                                                <p  class="style__free dn" id="style__dn"> бесплатно</p>
+                                                <div class="notification__free" id="notification__free_2">
+                                                    <p id="notification__free__style">Если товары вам не подойдут, мы
+                                                        вернем
+                                                        их обратно на склад — это бесплатно
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container__mobile">
+                <div class="container__main__content"id="mobile__delivery__method">
+                    <div class="payment__method">
+                        <div class="payment__method__wrapper">
+                            <p class="payment__method__title">Способ оплаты</p>
+                            <p class="payment__method__add" id="payment__modal">Изменить</p>
+                        </div>
+                        <div class="payment__method__bank__account">
+                            <div class="payment__method__account">
+                                <img src="/images/icons/payment-icon.svg" id="payment__method" alt="payment">
+                                <p class="payment__method__account-text">1234 56•• •••• 1234</p>
+                                <p>01/30</p>
+                            </div>
+                            <p class="payment__method__write__conditions">Спишем оплату с карты при получении</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container__mobile">
+                <div class="container__main__content height__form" id="mobile__delivery__method">
+                    <div class="container__recipient">
+                        <div class="recipient__wrapper">
+                            <p class="recipient__title">Получатель</p>
+                            <form action="#" id="form" name="form" class="recipient__input__wrapper">
+                                <div class="recipient__input__group-1">
+                                    <div class="wrapper__input__label ">
+                                        <input class="input__payment input__fio" placeholder="Имя" type="text" id="name"
+                                            name="name" data-reg="^[А-ЯЁа-яё]*$" data-required="Укажите имя"
+                                            data-rule="Неверный формат" data-number="0" tabindex="1">
+                                        <label class="label__payment" for="name">Укажите имя</label>
+                                    </div>
+                                    <div class="wrapper__input__label">
+                                        <input class="input__payment input__fio" placeholder="Фамилия" type="text"
+                                            id="surname" name="surname" data-reg="^[А-ЯЁа-яё]*$"
+                                            data-required="Введите фамилию" data-rule="Неверный формат" data-number="1"
+                                            tabindex="2">
+                                        <label class="label__payment" for="surname">Введите фамилию</label>
+                                    </div>
+                                </div>
+                                <div class="recipient__input__group-2">
+                                    <div class="wrapper__input__label">
+                                        <input class="input__payment" maxlength="18" placeholder="Телефон" type="text"
+                                            id="telephone" name="telephone"
+                                            data-reg="^[+][7] [(][0-9]{3}[)] [0-9]{3}[-][0-9]{2}[-][0-9]{2}$"
+                                            data-rule="Формат: +9 999 999 99 99" data-required="Укажите номер телефона"
+                                            data-number="2" tabindex="3">
+                                        <label class="label__payment" for="telephone">«Укажите номер телефона»</label>
+
+                                    </div>
+                                    <div class="wrapper__input__label">
+                                        <input class="input__payment" placeholder="Почта" type="text" id="email"
+                                            name="email" data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+                                            data-rule="Проверьте адрес электронной почты"
+                                            data-required="Укажите электронную почту" data-number="3" tabindex="4">
+                                        <label class="label__payment" for="email">Укажите электронную почту</label>
+
+                                    </div>
+                                    <div class="wrapper__input__label">
+                                        <input class="input__payment" placeholder="ИНН" maxlength="10" type="text"
+                                            id="inn" name="inn" data-reg="^[1-9]+[0-9]*$" data-rule="Формат: 1234567"
+                                            data-required="Укажите индекс" data-number="4" tabindex="5">
+                                        <label class="label__payment" for="inn">«Формат:1234567»</label>
+                                        <p class="recipient__customs">Для таможенного оформления</p>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="container__mobile">
+            <div class="container__main__content" id="mobile__container__main__content">
+                <div class="total" id="mobile__total">
+                    <div class="total__wrapper__text total__info__common" id="total__price">
+                        <p class="mobile__title">Итого</p>
+                        <p class="mobile__title mobile__price" id="modal__price price">0 cом</p>
+                    </div>
+                    <div class="total__info">
+                        <div class="total__amount total__info__common">
+                            <p class="total__amount__span mobile__style mobile__total__amount" id="amount__product">0 товара</p>
+                            <p class="price_product_not_dictount mobile__style mobile__discount" id="modal__price">0 сом</p>
+                        </div>
+                        <div class="total__discount total__info__common">
+                            <p class="mobile__style">Скидка</p>
+                            <p class="total__discount__text mobile__style mobile__total__discount" id="discount_price_product">0 сом</p>
+                        </div>
+                        <div class="total__delivery total__info__common">
+                            <p class="mobile__style">Доставка</p>
+                            <p class="mobile__style">Бесплатно</p>
+                        </div>
+                        <div class="total__delivery__point total__info__common mobile__delivery">
+                            <p>Доставка в пункт выдачи</p>
+                            <img class="edit__img__delivery" id="delivery__method" src="/images/icons/edit-icon.svg"
+                                alt="edit">
+                        </div>
+                        <p class="total__street mobile__delivery" id="street">Бишкек, улица Ахматбека Суюмбаева, 12/1
+                        </p>
+                        <p class="total__delivery__time mobile__delivery"><span>5–8 фев</span></p>
+                        <div class="total__info__delivery total__info__common mobile__total__info__delivery ">
+                            <img src="/images/icons/successful-check-icon.svg" alt="check">
+                            <div class="notification__hover">
+                                <p class="mobile__notification__text">Обратная доставка товаров на склад при отказе — <span>бесплатно</span></p>
+                                <div class="notification__free">
+                                    <p>Если товары вам не подойдут, мы вернем их обратно на склад — это
+                                        бесплатно</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="total__payment total__info__common mobile__delivery">
+                            <p>Оплата картой</p>
+                            <img class="edit__img__payment " id="payment__modal" src="/images/icons/edit-icon.svg"
+                                alt="edit">
+                        </div>
+                        <div class="total__map ">
+                            <img class="mobile__delivery" id="payment__method" src="/images/icons/payment-icon.svg"
+                                alt="payment">
+                            <p class="mobile__delivery">1234 12•• •••• 1234</p>
+                        </div>
+                        <div class="total__info__payment mobile__total__info__payment">
+                            <div>
+                                <div class="basket__all ">
+                                    <label class="mobile__label total__info__checkbox">
+                                        <input type="checkbox" class="input-checkbox__style mobile__checkbox" id="checkbox_all">
+                                        <span class="checkbox__style" id="mobile__checkbox"></span>
+                                        <p class="mobile__style">Списать оплату сразу</p>
+
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="order__conditions">Спишем оплату с карты при получении</p>
+                        </div>
+                        <button class="total__order mobile__total__order">Заказать</button>
+                        <div class="total__agreement">
+                            <img src="/images/icons/check-mark-icon.svg" alt="check">
+                            <p class="mobile__style mobile__label__total__agreement"> Соглашаюсь <span>с правилами
+                                    пользования торговой площадкой</span>
+                                и <span>возврата</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+
+        <div class="container">
+            <p class="footer__product__text">© 2022 ООО «Товары и точка»</p>
+            
+        </div>
+        <nav class="menu__mobile">
+            <div class="menu__mobile__element">
+                <img src="/images/icons/Union__pointed.svg" alt="">
+            </div>
+            <div class="menu__mobile__element">
+                <img src="/images/icons/catalog__pointed.svg" alt="">
+            </div>
+            <div class="menu__mobile__element">
+                <img src="/images/icons/cart__pointed.svg" alt="">
+            </div>
+            <div class="menu__mobile__element">
+                <img src="/images/icons/favorites__pointed.svg" alt="">
+
+            </div>
+            <div class="menu__mobile__element">
+                <img src="/images/icons/profile__pointed.svg" alt="">
+            </div>
+        </nav>
+    </footer>
+    <script src="js/modal.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/accordion.js"></script>
+    <script type="module" src="js/amount.js"></script>
+    <script src="js/validate.js"></script>
+</body>
+
+</html>

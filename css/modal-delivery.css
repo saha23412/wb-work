@@ -1,0 +1,171 @@
+.form_radio_btn {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.modal-delivery-element {
+    display: inline-block;
+
+}
+.modals{
+    display: none;
+}
+#label1{
+    margin-right: 3px;
+}
+.modal-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 1001;
+    width: 100%;
+    height: 100vh;
+}
+#modal__close{
+    align-items: flex-start;
+}
+#modal__close img{
+    margin-top: 6px;
+}
+.modal-delivery {
+    position: fixed;
+    top: 20%;
+    display: none;
+    left: 32%;
+    padding: 16px 24px 24px 24px;
+    width: 500px;
+    height: 408px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    z-index: 1002;
+}
+
+#radio1,
+#radio2 {
+    display: none;
+}
+
+.modal-delivery-element input:checked #label1,
+#label2 {
+    border: 2px solid #CB11AB;
+    border-radius: 24px;
+}
+
+.modal-delivery-element label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 15px;
+    line-height: 34px;
+    border: 1px solid #999;
+    border-right: none;
+    user-select: none;
+}
+
+.form_radio_group {
+    margin-bottom: 26px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.form_radio_group-item {
+    display: inline-block;
+    float: left;
+}
+
+.form_radio_group-item input[type=radio] {
+    display: none;
+}
+
+.button__label {
+    margin-bottom: 26px;
+}
+
+.form_radio_group-item label {
+
+    padding-top: 2px;
+    display: inline-block;
+    cursor: pointer;
+    width: 224px;
+    height: 36px;
+    text-align: center;
+    align-items: center;
+    border: 2px solid rgba(203, 17, 171, 0.15);
+    border-radius: 20px;
+    user-select: none;
+}
+#modal__delivery__title{
+    text-align: center;
+}
+.form_radio_group-item_street {
+    margin-bottom: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
+}
+
+.modal__delivery__title {
+    margin-bottom: 26px;
+}
+.modal__delivery__title p{
+    text-align: center;
+}
+.form_radio_group-item_street p {
+
+    font-weight: 400;
+    font-size: 16px;
+    ;
+}
+
+.modal_adres {
+
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.form_radio_group-item_street input {
+    margin-top: 8px;
+    display: flex;
+    align-items: flex-start;
+    margin-right: 5px;
+}
+
+.radio_label {
+
+    display: flex;
+    align-items: center;
+}
+
+.radio_label p {
+    width: 390px;
+    font-weight: 400;
+font-size: 16px;
+}
+
+/* Checked */
+.form_radio_group-item input[type=radio]:checked+label {
+
+    border: 2px solid #CB11AB;
+    border-radius: 24px;
+}
+
+.modal-delivery__button {
+    width: 164px;
+    height: 44px;
+    margin-top: 19px;
+    /* System/Magenta */
+
+    background: #CB11AB;
+    /* Тень в прокрутке */
+
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    align-items: center;
+    outline: none;
+    border: 0px solid transparent;
+    color: white;
+}

@@ -1,0 +1,138 @@
+/*Payment-method*/
+.payment__method {
+    padding: 16px 24px 24px 24px;
+
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+.payment__method__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.total__payment p{
+    margin-bottom: 0px;
+}
+.payment__method__title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.payment__method__add {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    color: #CB11AB;
+}
+
+.payment__method__bank__account {}
+
+.payment__method__account {
+    display: flex;
+
+}
+
+.payment__method__account img {
+    margin-right: 8px;
+}
+
+.payment__method__account-text {
+    margin-right: 12px;
+}
+
+.payment__method__write__conditions {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #A0A0A4;
+}
+
+/*Recipient*/
+.recipient__wrapper {
+
+    margin-top: 16px;
+    padding: 8px 24px 24px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    height: 216px;
+}
+.container__recipient{
+    margin-bottom: 26px;
+}
+.recipient__title {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 34px;
+}
+
+.recipient__input__wrapper {
+    width: 700px;
+}
+
+.recipient__input__wrapper input {
+    border: 0px solid;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    outline: none;
+}
+
+.recipient__input__wrapper input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    color: #A0A0A4;
+}
+
+.recipient__input__group-1 {
+    display: flex;
+}
+
+.recipient__input__group-1 input {
+    margin-right: 24px;
+    width: 338px;
+}
+
+.recipient__input__group-2 {
+    display: flex;
+}
+
+.recipient__input__group-2 input {
+    margin-top: 37px;
+    margin-right: 24px;
+    width: 218px;
+}
+
+.recipient__customs {
+    margin-top: 4px;
+
+    position: absolute;
+    font-weight: 400;
+    font-size: 12px;
+
+}
+.wrapper__input__label label{
+    display: none;
+    font-weight: 400;
+    font-size: 12px;
+    color: #F55123;
+}
+/*Footer*/
+footer {
+    z-index: -1;
+    position: absolute;
+    background-color: #6725A8;
+    margin-top: -24px;
+    width: 100%;
+    height: 88px;
+
+}
+
+.footer__product__text{
+    padding-top: 48px;
+    font-size: 13px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
