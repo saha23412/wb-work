@@ -13,7 +13,7 @@ function formatNumber(intNumber) {
         number = int.charAt(i) + number;
         space++;
     }
-    
+
     return number;
 }
 export default formatNumber

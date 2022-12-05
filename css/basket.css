@@ -103,8 +103,6 @@
     display: flex;
 }
 
-.basket__item:first-child {}
-
 .basket__singlet {
     display: flex;
     margin-right: 16px;
@@ -133,7 +131,6 @@
     max-height: 100%;
 }
 
-.item__info {}
 
 .item__title {
     width: 275px;

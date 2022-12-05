@@ -9,7 +9,6 @@ const ruleNotSpace = /\S/;
 function inputCheck(event, labelArray) {
     let inputValue = event.target.value.trim()
     let regRules = new RegExp(event.target.dataset.reg)
-    console.log(inputValue)
     if (!regRules.test(inputValue) && ruleNotSpace.test(inputValue)) {
         let messageError = event.target.dataset.rule
         let labelNumber = event.target.dataset.number

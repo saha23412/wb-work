@@ -1,9 +1,15 @@
 #span__free {
     display: none;
 }
-.mobile__span__img{
-display: none;
-} 
+
+.mobile__span__img {
+    display: none;
+}
+
+.item-missing__interaction {
+    margin-right: 117px;
+}
+
 @media screen and (max-width: 1415px) {
     .container {
         max-width: 1224px;
@@ -89,6 +95,14 @@ display: none;
 }
 
 @media screen and (max-width: 1080px) {
+    .modal-delivery {
+        left: 30%;
+    }
+
+    .modal-payment {
+        left: 30%;
+    }
+
     .notification__free {
         left: -13px;
     }
@@ -127,9 +141,11 @@ display: none;
         width: 924px;
 
     }
-    .mobile__style{
+
+    .mobile__style {
         font-size: 16px;
     }
+
     .input__search {
         max-width: 576px;
 
@@ -183,16 +199,32 @@ display: none;
 }
 
 @media screen and (max-width: 975px) {
+    .recipient__input__wrapper {
+        width: 604px;
+    }
+
+    .item__price__text {
+        font-size: 18px;
+    }
+
+    .notification__free {
+        left: 165px;
+    }
+
     .basket {
         padding: 5px;
     }
 
     .header__wrapper {
-        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .item-missing__interaction {
+        margin-right: 191px;
     }
 
     .container {
-        width: 750px;
+        width: 850px;
 
     }
 
@@ -205,13 +237,24 @@ display: none;
     }
 
     .input__search {
-        max-width: 350px;
+        max-width: 450px;
         margin-right: 15px;
         margin-left: 15px;
     }
 
     .item-menu:first-child {
         margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .container {
+        width: 750px;
+
+    }
+
+    .input__search {
+        max-width: 350px;
     }
 }
 
@@ -222,7 +265,7 @@ display: none;
     }
 
     .container {
-        width: 670px;
+        width: 720px;
 
     }
 
@@ -245,7 +288,7 @@ display: none;
 
 
     .container__main__content {
-        width: 100%;
+        width: 640px;
     }
 
     .input__search {
@@ -262,6 +305,26 @@ display: none;
 
         width: 480px;
         height: 390px;
+    }
+}
+
+@media screen and (max-width: 795px) {
+    .container {
+        width: 680px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .container {
+        width: 650px;
+    }
+
+    .input__search {
+        max-width: 325px;
+    }
+
+    .container__main__content {
+        width: 620px;
     }
 }
 
@@ -619,7 +682,7 @@ display: none;
     }
 
     #label1 {
-        margin-right: 8px;
+        margin-right: 3px;
     }
 
     .form_radio_group-item label {
@@ -633,57 +696,69 @@ display: none;
         align-items: baseline;
         font-size: 16px;
     }
-    .radio_label img{
+
+    .radio_label img {
         display: inline;
     }
-    .radio_label span{
+
+    .radio_label span {
         font-size: 13px;
         color: #A0A0A4;
     }
+
     .radio_label p {
         width: 238px;
-        
+
     }
-    #label1{
+
+    #label1 {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     #span__free {
         display: inline;
     }
-    .form_radio_group-item label{
+
+    .form_radio_group-item label {
         display: flex;
         justify-content: center;
         align-items: center;
         padding-top: 0px;
     }
-    .modal-delivery__button{
+
+    .modal-delivery__button {
         width: 100%;
         margin-top: 25px;
     }
-    .mobile__span__img{
+
+    .mobile__span__img {
         display: inline;
-        }
-        .modal-payment{
-            border-radius:0px ;
-            left: 0%;
-            width: 100%;
-            height: 594px;
-        }
-    
-.modal__title {
-    font-weight: 600;
-font-size: 20px;
-}
-.modal-payment__button{
-    margin-top: 246px;
-    width: 100%;
-}
-.basket__title{
-    font-size: 20px;
-}
-.basket__all label{
-    font-size: 16px;
-}
+    }
+
+    .modal-payment {
+        border-radius: 0px;
+        left: 0%;
+        width: 100%;
+        height: 594px;
+    }
+
+    .modal__title {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .modal-payment__button {
+        margin-top: 246px;
+        width: 100%;
+    }
+
+    .basket__title {
+        font-size: 20px;
+    }
+
+    .basket__all label {
+        font-size: 16px;
+    }
 }

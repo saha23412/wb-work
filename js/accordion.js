@@ -30,7 +30,6 @@ accordionProductButton.addEventListener("click", () => {
     flagAccordionProduct = !flagAccordionProduct;
 });
 accordionMissingProductButton.addEventListener("click", () => {
-    console.log("вызов");
     if (flagAccordionMissingProduct) {
         accordionMissingProduct.style.display = "none";
         accordionMissingProductButton.style.transform = "rotate(180deg)";

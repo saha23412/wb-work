@@ -4,7 +4,9 @@ const mobilePrice = document.querySelector('.mobile__price')
 const mobileDiscount = document.querySelector('.mobile__discount')
 const mobileTotalAmount = document.querySelector('.mobile__total__amount')
 const mobileTotalDiscount = document.querySelector('.mobile__total__discount')
+const mobileCheckbox = document.querySelector('.mobile__checkbox')
 const mobileButton = document.querySelector('.mobile__total__order')
+const mobileLabelAmount = document.querySelector('.mobile__label__amount')
 //Для пк
 const buttonOrder = document.querySelector('.total__order')
 const labelAmount = document.querySelector('.label__amount')
@@ -126,6 +128,7 @@ function amountProduct(event, product, amountProductArray) {
                 product.amountPrice += product.price
                 product.leftProduct -= 1
                 product.sumDiscount += (product.price * 100) / product.discount
+
             }
         })
     } else if (product.amount > 0) {
@@ -136,18 +139,31 @@ function amountProduct(event, product, amountProductArray) {
                 product.amountPrice -= product.price
                 product.leftProduct += 1
                 product.sumDiscount -= (product.price * 100) / product.discount
+
             }
         })
     }
-    if(product.amount<1){
-        counterChecbox--
+    if (product.amount < 1) {
         checboxAll.checked = false
-        console.log(counterChecbox)
         const productProperties = getTotalProduct(ProductCheckArray)
         totalPrice.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
         totalDiscount.innerHTML = `${formatNumber(productProperties.discountProduct)} сом`
         totalQuantityProduct.innerHTML = `${productProperties.amountProduct} товара`
+        labelAmount.innerHTML = +labelAmount.innerHTML - 1
+        mobileLabelAmount.innerHTML = +mobileLabelAmount.innerHTML - 1
         discountProductPrice.innerHTML = `-${formatNumber(productProperties.discountProduct - productProperties.priceProduct)} сом`
+        if (window.innerWidth <= 1024) {
+            mobilePrice.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+            mobileDiscount.innerHTML = `${formatNumber(productProperties.discountProduct)} сом`
+            mobileTotalAmount.innerHTML = `${productProperties.amountProduct} товара`
+            mobileTotalDiscount.innerHTML = `-${formatNumber(productProperties.discountProduct - productProperties.priceProduct)} сом`
+        }
+        if (checboxPayment.checked || mobileCheckbox.checked) {
+            buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+            if (window.innerWidth <= 1024) {
+                mobileButton.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+            }
+        }
     }
     checboxProduct.forEach(checbox => {
         if (checbox.checked === true && checbox.dataset.name === product.name && product.amount === 0) {
@@ -162,13 +178,32 @@ function getProduct(products, nameProduct) {
     let productElement = products.find(product => product.name === nameProduct)
     return productElement
 }
+mobileCheckbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+        const productProperties = getTotalProduct(ProductCheckArray)
+        if (window.innerWidth <= 1024) {
+            mobileButton.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+            orderConditions.style.display = 'none'
+            document.querySelector('.payment__method__write__conditions').style.display = 'none'
+        }
+    } else {
+        if (window.innerWidth <= 1024) {
+            mobileButton.innerHTML = 'Заказать'
+            orderConditions.style.display = 'block'
+            document.querySelector('.payment__method__write__conditions').style.display = 'block'
+        }
+    }
+})
 checboxPayment.addEventListener("change", (event) => {
+
     if (event.target.checked) {
         const productProperties = getTotalProduct(ProductCheckArray)
         buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+
         orderConditions.style.display = 'none'
         document.querySelector('.payment__method__write__conditions').style.display = 'none'
     } else {
+
         buttonOrder.innerHTML = 'Заказать'
         orderConditions.style.display = 'block'
         document.querySelector('.payment__method__write__conditions').style.display = 'block'
@@ -181,9 +216,13 @@ checboxAll.addEventListener("change", (event) => {
     if (event.target.checked) {
         checboxProduct.forEach(checbox => checbox.checked = true)
         ProductCheckArray = [...ProductArray]
+        if (window.innerWidth <= 325) {
+            mobileLabelAmount.innerHTML = ProductCheckArray.length
+            mobileLabelAmount.style.opacity = 1
+        }
         labelAmount.innerHTML = ProductCheckArray.length
         labelAmount.style.opacity = 1
-     
+
         Image = document.querySelectorAll('.place__delivery__wrapper__img img')
         Image.forEach(product => product.remove())
         ProductCheckArray.forEach(product => {
@@ -194,10 +233,19 @@ checboxAll.addEventListener("change", (event) => {
         })
         counterChecbox = ProductArray.length
         const productProperties = amountTotalPrice()
-        if (checboxPayment.checked) {
+        if (checboxPayment.checked || mobileCheckbox.checked) {
             buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+            if (window.innerWidth <= 1024) {
+                mobileButton.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+            }
         }
+        if (window.innerWidth <= 1024) {
+            mobilePrice.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+            mobileDiscount.innerHTML = `${formatNumber(productProperties.sumDiscount)} сом`
+            mobileTotalAmount.innerHTML = `${productProperties.amountProduct} товара`
 
+            mobileTotalDiscount.innerHTML = `-${formatNumber(productProperties.sumDiscount - productProperties.priceProduct)} сом`
+        }
         totalPrice.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
         totalDiscount.innerHTML = `${formatNumber(productProperties.sumDiscount)} сом`
         totalQuantityProduct.innerHTML = `${productProperties.amountProduct} товара`
@@ -206,11 +254,25 @@ checboxAll.addEventListener("change", (event) => {
 
     } else {
         checboxProduct.forEach(checbox => checbox.checked = false)
-        if (checboxPayment.checked) {
+        if (checboxPayment.checked || mobileCheckbox.checked) {
             buttonOrder.innerHTML = `0 сом`
+            if (window.innerWidth <= 1024) {
+                mobileButton.innerHTML = `0 сом`
+            }
+        }
+        if (window.innerWidth <= 1024) {
+            mobilePrice.innerHTML = `${0} сом`
+            mobileDiscount.innerHTML = `${0} сом`
+            mobileTotalAmount.innerHTML = `${0} товара`
+
+            mobileTotalDiscount.innerHTML = `${0} сом`
         }
         Image = document.querySelectorAll('.place__delivery__wrapper__img img')
         Image.forEach(product => product.remove())
+        if (window.innerWidth <= 325) {
+            mobileLabelAmount.innerHTML = 0
+            mobileLabelAmount.style.opacity = 0
+        }
         labelAmount.innerHTML = 0
         labelAmount.style.opacity = 0
         counterChecbox = 0
@@ -233,13 +295,28 @@ checboxProduct.forEach(checbox => {
                     ProductCheckArray.push(product)
                     labelAmount.style.opacity = 1
                     labelAmount.innerHTML = ProductCheckArray.length
+                    if (window.innerWidth <= 325) {
+                        mobileLabelAmount.innerHTML = ProductCheckArray.length
+                        mobileLabelAmount.style.opacity = 1
+                    }
                     const image = document.createElement('img')
                     image.src = `../images/product/${self.dataset.name}.svg`
                     image.dataset.name = self.dataset.name
                     wrapperImg.appendChild(image)
                     Image = document.querySelectorAll('.place__delivery__wrapper__img img')
                     const productProperties = getTotalProduct(ProductCheckArray)
-                    if (checboxPayment.checked) buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                    if (checboxPayment.checked || mobileCheckbox.checked) {
+                        buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                        if (window.innerWidth <= 1024) {
+                            mobileButton.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                        }
+                    }
+                    if (window.innerWidth <= 1024) {
+                        mobilePrice.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                        mobileDiscount.innerHTML = `${formatNumber(productProperties.discountProduct)} сом`
+                        mobileTotalAmount.innerHTML = `${productProperties.amountProduct} товара`
+                        mobileTotalDiscount.innerHTML = `-${formatNumber(productProperties.discountProduct - productProperties.priceProduct)} сом`
+                    }
                     totalPrice.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
                     totalDiscount.innerHTML = `${formatNumber(productProperties.discountProduct)} сом`
                     totalQuantityProduct.innerHTML = `${productProperties.amountProduct} товара`
@@ -248,8 +325,16 @@ checboxProduct.forEach(checbox => {
             })
         } else {
             ProductCheckArray = ProductCheckArray.filter(product => product.name !== self.dataset.name)
+
             labelAmount.innerHTML = ProductCheckArray.length
-            if(labelAmount.innerHTML==="0"){
+            mobileLabelAmount.innerHTML = ProductCheckArray.length
+            if (window.innerWidth <= 325) {
+                if (mobileLabelAmount.innerHTML === "0") {
+                    mobileLabelAmount.style.opacity = 0
+                }
+
+            }
+            if (labelAmount.innerHTML === "0") {
                 labelAmount.style.opacity = 0
             }
             Image = document.querySelectorAll('.place__delivery__wrapper__img img')
@@ -259,7 +344,19 @@ checboxProduct.forEach(checbox => {
                 }
             })
             const productProperties = getTotalProduct(ProductCheckArray)
-            if (checboxPayment.checked) buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+            if (checboxPayment.checked || mobileCheckbox.checked) {
+                buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                if (window.innerWidth <= 1024) {
+                    mobileButton.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                }
+            }
+            if (window.innerWidth <= 1024) {
+                mobilePrice.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                mobileDiscount.innerHTML = `${formatNumber(productProperties.discountProduct)} сом`
+                mobileTotalAmount.innerHTML = `${productProperties.amountProduct} товара`
+
+                mobileTotalDiscount.innerHTML = `-${formatNumber(productProperties.discountProduct - productProperties.priceProduct)} сом`
+            }
             totalPrice.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
             totalDiscount.innerHTML = `${formatNumber(productProperties.discountProduct)} сом`
             totalQuantityProduct.innerHTML = `${productProperties.amountProduct} товара`
@@ -282,11 +379,30 @@ buttonArray.forEach(button => {
             if (checbox.checked === true) {
                 if (self.dataset.name === checbox.dataset.name) {
                     const productProperties = getTotalProduct(ProductCheckArray)
-                    if (checboxPayment.checked) buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                    if (checboxPayment.checked || mobileCheckbox.checked) {
+                        buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                        if (window.innerWidth <= 1024) {
+                            mobileButton.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                        }
+                    }
                     totalPrice.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
                     totalDiscount.innerHTML = `${formatNumber(productProperties.discountProduct)} сом`
                     totalQuantityProduct.innerHTML = `${productProperties.amountProduct} товара`
                     discountProductPrice.innerHTML = `-${formatNumber(productProperties.discountProduct - productProperties.priceProduct)} сом`
+                    if (window.innerWidth <= 1024) {
+                        mobilePrice.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                        mobileDiscount.innerHTML = `${formatNumber(productProperties.discountProduct)} сом`
+                        mobileTotalAmount.innerHTML = `${productProperties.amountProduct} товара`
+                        mobileTotalDiscount.innerHTML = `-${formatNumber(productProperties.discountProduct - productProperties.priceProduct)} сом`
+                    }
+                }
+            } else {
+                const productProperties = getTotalProduct(ProductCheckArray)
+                if (checboxPayment.checked || mobileCheckbox.checked) {
+                    buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                    if (window.innerWidth <= 1024) {
+                        mobileButton.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
+                    }
                 }
             }
         })
@@ -294,8 +410,6 @@ buttonArray.forEach(button => {
         editElementInnerHTML(pricepProductArray, self.dataset.name, `${formatNumber(product.amountPrice)} coм`)
         editElementInnerHTML(leftAmountArray, self.dataset.name, `Осталось ${product.leftProduct} шт.`)
         editElementInnerHTML(discountProductArray, self.dataset.name, `${formatNumber(product.sumDiscount)} сом`)
-
-
     })
 })
 export default amountTotalPrice
