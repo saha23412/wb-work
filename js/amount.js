@@ -397,13 +397,7 @@ buttonArray.forEach(button => {
                     }
                 }
             } else {
-                const productProperties = getTotalProduct(ProductCheckArray)
-                if (checboxPayment.checked || mobileCheckbox.checked) {
-                    buttonOrder.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
-                    if (window.innerWidth <= 1024) {
-                        mobileButton.innerHTML = `${formatNumber(productProperties.priceProduct)} сом`
-                    }
-                }
+              
             }
         })
         editElementInnerHTML(amountProductArray, self.dataset.name, product.amount)
