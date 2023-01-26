@@ -33,7 +33,7 @@ buttonDelivery.forEach((button) => {
 selectButton.addEventListener("click", () => {
     paymentMethod = document.querySelector('input[name="payment"]:checked');
     paymentMethodImg.forEach(
-        (image) => (image.src = `./images/icons/${paymentMethod.value}.svg`)
+        (image) => (image.src = `images/icons/${paymentMethod.value}.svg`)
     );
     modalDeliveryElement.style.display = "none";
     modalOverlay.style.display = "none";
