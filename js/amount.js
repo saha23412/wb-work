@@ -266,7 +266,7 @@ checboxAll.addEventListener("change", (event) => {
         Image.forEach((product) => product.remove());
         ProductCheckArray.forEach((product) => {
             const image = document.createElement("img");
-            image.src = `../images/product/${product.name}.svg`;
+            image.src = `images/product/${product.name}.svg`;
             image.dataset.name = product.name;
             wrapperImg.appendChild(image);
         });

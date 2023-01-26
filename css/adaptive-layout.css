@@ -315,6 +315,9 @@
 }
 
 @media screen and (max-width: 690px) {
+    .notification__hover:hover .notification__free {
+        display: none;
+    }
     .container {
         width: 660px;
     }
