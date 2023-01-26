@@ -316,23 +316,29 @@
 
 @media screen and (max-width: 690px) {
     .container {
-        width: 650px;
+        width: 660px;
     }
-
+    .notification__free{
+        left: 120px;
+    }
     .input__search {
         max-width: 325px;
     }
 
     .container__main__content {
-        width: 620px;
+        width: 660px;
     }
 }
 
-@media screen and (max-width: 451px) {
+@media screen and (max-width: 670px) {
     .header {
         padding: 0px;
     }
-
+    .notification__free{
+        display: none;
+        opacity: 0
+        ;
+    }
     .basket {
         padding: 5px;
     }
@@ -666,6 +672,7 @@
     .notification__free {
         width: 275px;
         padding: 5px;
+        left: 165px;
     }
 
     .mobile__style {
