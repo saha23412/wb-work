@@ -353,7 +353,7 @@ checboxProduct.forEach((checbox) => {
                         mobileLabelAmount.style.opacity = 1;
                     }
                     const image = document.createElement("img");
-                    image.src = `../images/product/${self.dataset.name}.svg`;
+                    image.src = `images/product/${self.dataset.name}.svg`;
                     image.dataset.name = self.dataset.name;
                     wrapperImg.appendChild(image);
                     Image = document.querySelectorAll(
