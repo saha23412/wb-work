@@ -96,11 +96,11 @@
 
 @media screen and (max-width: 1080px) {
     .modal-delivery {
-        left: 30%;
+        left: 15%;
     }
 
     .modal-payment {
-        left: 30%;
+        left: 21%;
     }
 
     .notification__free {
