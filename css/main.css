@@ -27,7 +27,7 @@ blockquote,
 dl,
 dd {
     margin: 0;
-    font-family: 'Segoe UI';
+    font-family: "Segoe UI";
     font-style: normal;
 }
 
@@ -65,7 +65,7 @@ img {
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
-article>*+* {
+article > * + * {
     margin-top: 1em;
 }
 
@@ -97,11 +97,13 @@ body {
 
 /*Container*/
 .container {
-    max-width: 1400px;
+    max-width: 1353px;
     margin: 0 auto;
-
 }
-
+.container__mobile{
+    max-width: 1353px;
+    margin: 0 auto;
+}
 .container__main__content {
     width: 891px;
 }
@@ -110,7 +112,7 @@ body {
 .header {
     height: 112px;
     width: 100%;
-    background: #6725A8;
+    background: #6725a8;
     padding-right: 24px;
     padding-left: 24px;
 }
@@ -124,8 +126,6 @@ body {
 
 .logo__wrapper {
     display: flex;
-
-
 }
 
 button {
@@ -152,19 +152,20 @@ button {
 .logo__title {
     font-weight: 600;
     font-size: 28px;
-    line-height: 24px;
+    line-height: 21.5px;
     font-variant: small-caps;
-    letter-spacing: 0.02em;
-    color: #FFFFFF;
+    letter-spacing: 0.025em;
+    color: #ffffff;
 }
-
+#total__price p {
+    margin-right: 3px;
+}
 .header__search {
     position: relative;
-
 }
 
 .header__search::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -173,7 +174,7 @@ button {
     width: 20px;
     height: 20px;
     background-color: rgba(255, 255, 255, 0.5);
-    background: url('../images/icons/search-icon.svg') no-repeat;
+    background: url("../images/icons/search-icon.svg") no-repeat;
     background-size: cover;
     opacity: 0.5;
 }
@@ -191,7 +192,7 @@ button {
     height: 16px;
     color: white;
     border-radius: 50%;
-    background-color: #F55123;
+    background-color: #f55123;
     align-items: center;
     text-align: center;
     display: flex;
@@ -200,28 +201,28 @@ button {
 }
 
 .input__search {
-    padding: 20px;
+    padding: 0px 0px 3px 19px;
     outline: none;
     border: 0px solid;
     width: 970px;
     height: 48px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 36px;
+    font-size: 18px;
 }
 
 .input__search::placeholder {
-
     color: white;
     opacity: 0.5;
 }
 
 .header__menu {
     display: flex;
-
 }
 
 .item-menu:first-child {
-    margin-right: 40px;
+    padding-top: 3px;
+    margin-right: 43px;
 }
 
 .item-menu {
@@ -236,8 +237,7 @@ button {
 }
 
 .item-menu__link {
-
     font-size: 13px;
     text-align: end;
-    color: #FFFFFF;
+    color: #ffffff;
 }

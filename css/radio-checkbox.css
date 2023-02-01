@@ -34,7 +34,9 @@ label {
     border-radius: 6px;
     margin-right: 12px;
 }
-
+.checbox__style_2{
+    margin-bottom: 2px;
+}
 .radio__style {
     display: inline-block;
     border-radius: 50%;

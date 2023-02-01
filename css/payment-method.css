@@ -9,7 +9,7 @@
 .payment__method__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .total__payment p {
@@ -35,7 +35,7 @@
 }
 
 .payment__method__account img {
-    margin-right: 8px;
+    margin-right: 9px;
 }
 
 .payment__method__account-text {
@@ -65,9 +65,10 @@
 }
 
 .recipient__title {
+    margin-top: 7px;
     font-weight: 700;
     font-size: 24px;
-    margin-bottom: 34px;
+    margin-bottom: 30px;
 }
 
 .recipient__input__wrapper {
@@ -142,7 +143,7 @@ footer {
     padding-top: 48px;
     font-size: 13px;
     line-height: 16px;
-    align-items: center;
+   
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
 }
