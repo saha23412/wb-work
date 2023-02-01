@@ -215,6 +215,7 @@
     #accordion {
         display: flex;
         justify-content: center;
+        margin-bottom: 21px;
     }
 
     #mobile__container__main__content {
@@ -397,17 +398,17 @@
         margin-left: 3px;
     }
     .basket__checkbox__wrapper {
-        margin-top: 13px;
+        margin-top: 14px;
     }
     .product__total__wrapper {
         justify-content: flex-start;
     }
     .basket__title {
         font-size: 20px;
-        margin-top: 9px;
+        margin-top: 8px;
     }
     .search__img {
-        margin-right: 17px;
+        margin-right: 4px;
         padding-top: 3px;
     }
     .label__product .checkbox__style {
@@ -420,7 +421,7 @@
         align-items: center;
     }
     .header__wrapper__mobile {
-        padding-top: 11px;
+        padding-top: 9px;
     }
 
     .header__wrapper__mobile p {
@@ -447,6 +448,7 @@
 
     .container {
         width: 305px;
+        padding: 5px;
     }
     .container__mobile {
         width: 320px;
@@ -477,7 +479,7 @@
     }
 
     .wrapper__input__label {
-        width: 228px;
+        width: 100%;
     }
 
     .size {
@@ -507,6 +509,7 @@
         margin-top: 5px;
         padding-bottom: 1px;
     }
+
     .basket__item__2 .item__interaction {
         margin-bottom: 9px;
     }
@@ -664,10 +667,13 @@
         box-shadow: none;
         position: static;
         width: 320px;
-        height: 426px;
+        height: 413px;
         background-color: transparent;
     }
-
+    .footer__product__text {
+        padding-top: 40px;
+      
+    }
     .recipient__input__group-1 {
         display: block;
     }
@@ -683,14 +689,16 @@
     }
 
     .recipient__wrapper input {
-        max-width: 270px;
+        max-width: 100%;
     }
 
-    #name,
-    #surname {
-        max-width: 270px;
+    .recipient__input__group-1 input {
+        margin-right: 0px;
     }
 
+    .recipient__input__group-2 .wrapper__input__label input {
+        width: 100%;
+    }
     #form {
         width: 100%;
     }
@@ -707,8 +715,11 @@
         margin-top: 45px;
     }
 
-    .recipient__input__group-2 .wrapper__input__label input {
-        width: 270px;
+    .recipient__input__group-2 input {
+        margin-top: 46px;
+    }
+    .recipient__customs {
+        margin-top: 2px;
     }
     #mobile__text_2 {
         line-height: 21px;
@@ -737,7 +748,9 @@
         margin-right: 10.5px;
         justify-content: flex-end;
     }
-
+    .recipient__input__group-2 input {
+        margin-right: 0px;
+    }
     .item-missing__info p {
         font-weight: 400;
         font-size: 14px;
@@ -779,21 +792,25 @@
         margin-right: 20px;
         margin-bottom: 9px;
     }
-    #delivery__method {
-        margin-right: 8px;
+    .place__delivery__free {
+        width: 265px;
     }
-
+    .check-marker {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
     #mobile__delivery__method {
         width: 320px;
     }
     #delivery__2 {
         margin-top: 24px;
+        margin-bottom: 21px;
     }
-    .place__delivery__point__mobile{
+    .place__delivery__point__mobile {
         margin-bottom: 12px;
     }
     .delivery__method {
-        margin-top: 23px;
+        margin-top: -3px;
     }
     .delivery__edit {
         align-items: center;
@@ -807,7 +824,7 @@
     }
 
     .delivery__method {
-        padding: 16px 16px 16px 8px;
+        padding: 16px 16px 16px 16px;
     }
 
     .payment__method {
@@ -830,9 +847,16 @@
     .payment__method__title {
         font-size: 20px;
     }
-
+    .recipient__title {
+        margin-top: 2px;
+    }
+    #name,
+    #surname {
+        width: 100%;
+    }
     .payment__method__wrapper {
         align-items: center;
+        margin-bottom: 6px;
     }
 
     .item__title_1 {
@@ -864,15 +888,20 @@
     .menu__mobile {
         display: flex;
         width: 100%;
-        margin-top: 24px;
+        margin-top: 20px;
     }
 
     #mobile__checkbox {
         position: static;
     }
-
+    #mobile__container__main__content {
+        margin-top: 41px;
+    }
+    #total__price p {
+        margin-right: 4px;
+    }
     .total {
-        padding: 16px;
+        padding: 0px;
     }
 
     .notification__free {
@@ -880,11 +909,36 @@
         padding: 5px;
         left: 165px;
     }
-
+    .total__amount {
+        margin-top: 6px;
+    }
+    .total__info__delivery {
+        margin-top: 17px;
+    }
+    .total__info__delivery p {
+        width: 242px;
+        margin-left: 0px;
+        margin-right: 5px;
+        line-height: 17px;
+    }
     .mobile__style {
         font-size: 16px;
+        margin-right: 5px;
     }
 
+    #mobile__checkbox {
+        margin-right: 10px;
+    }
+    .total__agreement p {
+        margin-left: 9px;
+    }
+    .order__conditions {
+        margin-left: 2px;
+        margin-top: 4px;
+    }
+    .total__order {
+        margin-bottom: 14px;
+    }
     .modal-delivery {
         border-radius: 0px;
         left: 0%;
