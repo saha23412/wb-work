@@ -264,11 +264,30 @@ checboxAll.addEventListener("change", (event) => {
 
         Image = document.querySelectorAll(".place__delivery__wrapper__img img");
         Image.forEach((product) => product.remove());
-        ProductCheckArray.forEach((product) => {
+        ProductCheckArray.forEach((product, index) => {
+            const block = document.createElement("div");
+            const notification = document.createElement("div");
             const image = document.createElement("img");
+            block.className = "notification__block";
+            block.dataset.name = product.name;
+            notification.className = "notification__product";
+            notification.innerHTML = product.amount;
             image.src = `images/product/${product.name}.svg`;
             image.dataset.name = product.name;
-            wrapperImg.appendChild(image);
+            block.appendChild(notification);
+            block.appendChild(image);
+            if (index === 2) {
+                if (window.innerWidth <= 660) {
+                    document.querySelector("#delivery__2").style.display =
+                        "block";
+                } else {
+                    document.querySelector("#delivery__2").style.display =
+                        "flex";
+                }
+                document.querySelector("#delivery__2").appendChild(block);
+            } else {
+                wrapperImg.appendChild(block);
+            }
         });
         counterChecbox = ProductArray.length;
         const productProperties = amountTotalPrice();
@@ -322,6 +341,13 @@ checboxAll.addEventListener("change", (event) => {
         }
         Image = document.querySelectorAll(".place__delivery__wrapper__img img");
         Image.forEach((product) => product.remove());
+        document
+            .querySelectorAll(".notification__block")
+            .forEach((notification) => {
+                console.log(notification.dataset.name);
+                notification.remove();
+            });
+        document.querySelector("#delivery__2").style = "none";
         if (window.innerWidth <= 325) {
             mobileLabelAmount.innerHTML = 0;
             mobileLabelAmount.style.opacity = 0;
@@ -343,7 +369,7 @@ checboxProduct.forEach((checbox) => {
         const self = event.target;
         if (self.checked) {
             counterChecbox++;
-            ProductArray.forEach((product) => {
+            ProductArray.forEach((product, index) => {
                 if (product.name === self.dataset.name) {
                     ProductCheckArray.push(product);
                     labelAmount.style.opacity = 1;
@@ -352,10 +378,34 @@ checboxProduct.forEach((checbox) => {
                         mobileLabelAmount.innerHTML = ProductCheckArray.length;
                         mobileLabelAmount.style.opacity = 1;
                     }
+                    const block = document.createElement("div");
+                    const notification = document.createElement("div");
                     const image = document.createElement("img");
-                    image.src = `images/product/${self.dataset.name}.svg`;
+                    block.className = "notification__block";
+                    notification.className = "notification__product";
+                    notification.innerHTML = product.amount;
+                    block.dataset.name = self.dataset.name;
                     image.dataset.name = self.dataset.name;
-                    wrapperImg.appendChild(image);
+                    image.src = `images/product/${self.dataset.name}.svg`;
+                    block.appendChild(notification);
+                    block.appendChild(image);
+                    if (ProductCheckArray.length>2) {
+                        console.log(ProductArray.length) 
+                        if (window.innerWidth <= 660) {
+                            document.querySelector(
+                                "#delivery__2"
+                            ).style.display = "block";
+                        } else {
+                            document.querySelector(
+                                "#delivery__2"
+                            ).style.display = "flex";
+                        }
+                        document
+                            .querySelector("#delivery__2")
+                            .appendChild(block);
+                    } else {
+                        wrapperImg.appendChild(block);
+                    }
                     Image = document.querySelectorAll(
                         ".place__delivery__wrapper__img img"
                     );
@@ -401,7 +451,7 @@ checboxProduct.forEach((checbox) => {
             ProductCheckArray = ProductCheckArray.filter(
                 (product) => product.name !== self.dataset.name
             );
-
+            
             labelAmount.innerHTML = ProductCheckArray.length;
             mobileLabelAmount.innerHTML = ProductCheckArray.length;
             if (window.innerWidth <= 325) {
@@ -415,11 +465,21 @@ checboxProduct.forEach((checbox) => {
             Image = document.querySelectorAll(
                 ".place__delivery__wrapper__img img"
             );
+
+            document
+                .querySelectorAll(".notification__block")
+                .forEach((notification) => {
+                    console.log(notification.dataset.name);
+                    if (notification.dataset.name === self.dataset.name) {
+                        notification.remove();
+                    }
+                });
             Image.forEach((img) => {
                 if (img.dataset.name === self.dataset.name) {
                     img.remove();
                 }
             });
+            document.querySelector("#delivery__2").style.display = "none";
             const productProperties = getTotalProduct(ProductCheckArray);
             if (checboxPayment.checked || mobileCheckbox.checked) {
                 buttonOrder.innerHTML = `${formatNumber(

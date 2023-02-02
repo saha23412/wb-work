@@ -215,7 +215,8 @@
 }
 
 #delivery__2 {
-    margin-top: 46px;
+    display: none;
+    margin-top: 16px;
     margin-bottom: 26px;
 }
 
